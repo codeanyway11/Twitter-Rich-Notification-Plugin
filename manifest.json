@@ -1,0 +1,28 @@
+{
+  "manifest_version" :2,
+
+  "name" : "Rick Twitter Notifier!",
+  "description": "Allows you to get Desktop notification from Twitter",
+  "background" : {
+    "page": "background.html"
+  },
+  "content_scripts": [{
+    "js": ["jquery.js", "myscript.js"],
+    "matches": ["http://*/*", "https://*/*"]
+    }],
+
+    "version": "1.0",
+    "icons" : {
+      "64": "icon.png",
+      "16": "icon.png",
+      "128": "icon.png",
+      "32" : "icon.png"
+    },
+
+    "permissions" :[
+      "notifications",
+      "https://twitter.com/i/notifications",
+      "http://twitter.com/i/notifications"
+
+    ]
+  }
